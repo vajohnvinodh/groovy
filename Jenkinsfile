@@ -4,10 +4,8 @@ pipeline {
         stage('my first stage') {
             steps {
                 script {
-                    File myfile = new File("/tmp/batch2.txt")
-                    println "context of myfile is ${myfile.readLines()}"
-                    for (line in myfile.readLines()) {
-                        println "my line is ${line}"
+                    File myfile = new File("/tmp/devops.txt")
+                    myfile.append("hi John")
                     }
                 }
             }

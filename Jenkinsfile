@@ -4,9 +4,11 @@ pipeline {
         stage('my first stage') {
             steps {
                 script {
-                    a = input message: 'please enter a value' , parameters:
-                    [string(defualtValue: '10', description: '', name: 'myval', trim: false)]
-                    println "my a value is ${a}"
+                    a = 1
+                    while (a <=10) {
+                        println "value of a is ${a}"
+                        a = a + 1
+                    }
                 }
             }
         }

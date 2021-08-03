@@ -1,10 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage (' my first stage' ){
+        stage('my first stage') {
             steps {
                 script {
-                    println "hi john"
+                    File myfile = new File("/tmp/batch2.txt")
+                    println "context of myfile is ${myfile.readLines()}"
+                    for (line in myfile.readLines()) {
+                        println "my line is ${line}"
+                    }
                 }
             }
         }

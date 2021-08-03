@@ -6,8 +6,8 @@ pipeline {
                 script {
                     File myfile = new File("/tmp/devops.txt")
                     myfile.append("hi John")
-                    }
                 }
             }
         }
     }
+}

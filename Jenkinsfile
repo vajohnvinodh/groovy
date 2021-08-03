@@ -5,8 +5,8 @@ pipeline {
             steps {
                 script {
                     val1 = 10
-                    val 2 = 20
-                    val 3 = 30
+                    val2 = 20
+                    val3 = 30
                     if (val1 > val2 && val1 > val3) {
                         println "val1 is big, ${val1}"
                     }

@@ -1,15 +1,14 @@
-def sum(a=20, b=30) {
-    println "sum of ${a}, ${b} is"+ (a+b)
-}
-
 pipeline {
     agent any
     stages {
-        stage('working with functions') {
+        stage('my first stage') {
             steps {
                 script {
-                    sum(10,30)
-                    sum()
+                    File myfile = new File("/tmp/batc2.txt")
+                    println "context of myfile is ${myfile.readLines()}"
+                    for (line in myfile.readLines()) {
+                        println "my line is ${line}"
+                    }
                 }
             }
         }
